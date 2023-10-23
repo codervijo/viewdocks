@@ -1,0 +1,15 @@
+#:kivy 1.1.0
+
+DockerList:
+    BoxLayout:
+        orientation:'vertical'
+        GridLayout:
+            cols: 4
+            Button:
+                text:"0"
+                font_size: 100
+                on_press: root.pressed_value(self.text)
+            Button:
+                text:"1"
+                font_size: 100
+                on_press: root.pressed_value(self.text)
