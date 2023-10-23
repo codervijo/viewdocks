@@ -1,9 +1,9 @@
-from kivy.app import App
+from kivy.app             import App
 from kivy.uix.floatlayout import FloatLayout
-from kivy.factory import Factory
-from kivy.properties import ObjectProperty
-from kivy.properties import DictProperty
-from kivy.uix.popup import Popup
+from kivy.factory         import Factory
+from kivy.properties      import ObjectProperty
+from kivy.properties      import DictProperty
+from kivy.uix.popup       import Popup
 
 import os
 import pdb
@@ -27,7 +27,7 @@ class CalcRuntime:
         self.typed = True
         self.text += val
 
-class Root(FloatLayout):
+class DockerList(FloatLayout):
     #def __init__(self):
     #    self.rt = CalcRuntime()
     rt = CalcRuntime()
@@ -54,12 +54,12 @@ class Root(FloatLayout):
         #pdb.set_trace()
         self.ids.show_eq.text = self.rt.get_text()
 
-class Calc(App):
+class ViewDocks(App):
     def print_val(self, *args):
         print('jaja')
 
 
-Factory.register('Root', cls=Root)
+Factory.register('DockerList', cls=DockerList)
 
 if __name__ == '__main__':
-    Calc().run()
+    ViewDocks().run()
